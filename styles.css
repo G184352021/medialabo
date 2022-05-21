@@ -1,6 +1,19 @@
 h1{
-    color:rgba(56, 208, 242, 0.503);
+    color:aquamarine;
 }
 h2,p.x{
     border:1px 
+}
+a:link{
+    color:mediumaquamarine;
+}
+a:visited{
+    color:lightpink;
+}
+strong{
+    color:rgb(58, 58, 58);
+    border-bottom:thick double rgb(229, 169, 189);
+}
+h3.main{
+    color:aquamarine;
 }
