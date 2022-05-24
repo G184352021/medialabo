@@ -18,7 +18,7 @@ function hantei() {
     //        ページに表示する方法はまだ習っていないので
     //        判定結果はコンソールに出力すること
 
-    let log=document.qureySelector('div#result');
+    let log=document.querySelector('div#result');
     let a;
     a.textContent=kaisu+"回目の予想:"+yoso;
     h1.insertAdjacentElement('afterend',a);
