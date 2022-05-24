@@ -14,3 +14,163 @@
 
     </body>
 </html>
+/*
+import java.util.Scanner;
+
+public class MatrixMul {
+	public static void main(String[] args) {
+		int [][] a=new int [2][3];
+		int [][] b=new int [3][2];
+		
+		int [][] ans=new int [2][2];
+		
+		Scanner sin=new Scanner(System.in);
+		for(int i=0;i<a.length;i++) {
+			System.out.println("Aの"+(i+1)+"行目：");
+			int o=sin.nextInt();
+			int t=sin.nextInt();
+			int th=sin.nextInt();
+			a[i][0]=o;
+			a[i][1]=t;
+			a[i][2]=th;
+		}
+		
+		for(int i=0;i<b.length;i++) {
+			System.out.println("Bの"+(i+1)+"行目：");
+			int o=sin.nextInt();
+			int t=sin.nextInt();
+			b[i][0]=o;
+			b[i][1]=t;
+		}
+		
+		for(int i=0;i<ans.length;i++) {
+			for(int j=0;j<i;j++) {
+			int ans[i][j]=a[0][0]*b[0][0]+a[0][1]*b[1][0]+a[0][2]*b[2][0]+a[0][3]*b[3][0];
+		}
+		}
+		
+		System.out.println("行列A： ");
+		for(int i=0;i<b.length;i++){
+			for(int j=0;j<a[i].length;j++) {
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+		System.out.println("行列B： ");
+		for(int i=0;i<b.length;i++){
+			for(int j=0;j<a[i].length;j++) {
+			System.out.print(b[i][j]+" ");
+			}
+			System.out.println();
+			}
+		
+		System.out.println("行列Ans(A×B)： ");
+		for(int i=0;i<ans[i].length;i++) {
+			for(int j=0;j<ans[i].length;j++) {
+				System.out.print(ans[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+}
+
+
+
+
+public class Cipher {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+
+		String s=args[0];
+		char c;
+		System.out.println("入力された文字列： "+s);
+		System.out.print("変換された文字列： ");
+		for(int i=0;i<s.length();i++) {
+			c=s.charAt(i);
+			c=(char)(c+1);
+			System.out.print(c);
+		}
+		System.out.println();
+	}
+
+}
+
+
+
+public class StarArray {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+
+		char[][] c=new char[6][6];
+	for(int i=0;i<c.length;i++) {
+			for(int n=0;n<=i;n++) {
+					c[i][n]='★';
+			System.out.print(c[i][n]);
+			}
+			System.out.println();
+		}
+		for(int i=0;i<c.length;i++) {
+			for(int n=5;n>=i;n--) {
+				c[i][n]='☆';
+				System.out.print(c[i][n]);
+			}
+			System.out.println();
+		}
+	}
+
+}
+
+
+import java.util.Random;
+public class Scores {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+
+		int [][] seiseki=new int[80][2];
+		char[] x=new char[80];
+		int a;
+		int min=0;
+		int max=100;
+		int ave=0;
+		Random r=new Random();
+		for(int i=0;i<seiseki.length;i++) {
+			for(int n=0;n<2;n++) {
+				a=r.nextInt(101);
+			seiseki [i][n]=a;
+			
+			ave=(seiseki[i][0]+seiseki[i][1])/2;
+			if(ave<60) {
+				x[i]='D';
+			}else if(ave<=60 && ave<70) {
+				x[i]='C';
+			}else if(ave<=70 && ave<80) {
+				x[i]='B';
+			}else if(ave<=80 && ave<90) {
+				x[i]='A';
+			}else {
+				x[i]='S';
+			}
+			
+			if(min>seiseki[i][n]) {
+				min=seiseki[i][n];
+			}else if(max<seiseki[i][n]) {
+				max=seiseki[i][n];
+			}
+		}
+	}
+		System.out.println("中間試験の最低点は "+min+"です。");
+		System.out.println("期末試験の最高点は "+max+"です。");
+		for(int i=0;i<seiseki.length;i++) {
+				System.out.print("["+(i+1)+"]");
+				System.out.print("["+seiseki[i][0]+"]");
+				System.out.print("["+seiseki[i][1]+"]");
+				System.out.print("["+x[i]+"]");
+				System.out.println();
+			}
+	}
+}
+
+*/
