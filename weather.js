@@ -50,3 +50,10 @@ let data = {
 console.log("都市名:"+data.name+" "+
 "最高気温:"+data.main.temp_max+" "+
 "最低気温:"+data.main.temp_min);
+
+let a=document.querySelector('span#tosi');
+a.textContent=data.name;
+let b=document.querySelector('span#max');
+b.textContent=data.main.temp_max;
+let c=document.querySelector('span#min');
+c.textContent=data.main.temp_min;
