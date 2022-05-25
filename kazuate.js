@@ -18,23 +18,26 @@ function hantei() {
     //        ページに表示する方法はまだ習っていないので
     //        判定結果はコンソールに出力すること
 
-    let log=document.querySelector('div#result');
-    let a;
-    a.textContent=kaisu+"回目の予想:"+yoso;
-    h1.insertAdjacentElement('afterend',a);
+
+
+    let c=document.querySelector('div#result');
+    let a=document.querySelector('span#kaisuu');
+    a.textContent=kaisu;
+    let b=document.querySelector('span#yoso');
+    b.textContent=yoso;
+    
     if(yoso===kotae){
-        a.textContent="正解です。おめでとう！";
-        h1.insertAdjacentElement('afterend',a);
+        c.textContent="正解です。おめでとう！";
+        
     }else if(yoso<kotae){
-        ("まちがい。答えはもっと大きいです");
+        c.textContent="まちがい。答えはもっと大きいです";
     }else if(yoso>kotae){
-        a.textContent="まちがい。答えはもっと小さいです";
-        h1.insertAdjacentElement('afterend',a);
+        c.textContent="まちがい。答えはもっと小さいです";
+        
     }
     if(kaisu>4){
-        a.textContent="答えは"+kotae+"でした。すでにゲームは終わっています。";
-        h1.insertAdjacentElement('afterend',a);
+        c.textContent="答えは"+kotae+"でした。すでにゲームは終わっています。";
     }
-    
+    c.insertAdjacentElement('afterend',c);
 
 }
