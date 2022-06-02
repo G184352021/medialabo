@@ -4,8 +4,8 @@ p{
 p.tosi{
 	border: 1px solid #cfcfcf;
     display:grid;
-    grid-template-columns:1fr 1fr 1fr 1fr;
-    grid-template-rows:10px 10px 10px;
+    grid-template-columns:1fr 2fr 2fr 2fr;
+    grid-template-rows:30px 30px 30px;
     grid-gap:10px;
     width:100px;
 }
