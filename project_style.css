@@ -1,3 +1,11 @@
 p{
     color:blue;
 }
+p.tosi{
+	border: 1px solid #cfcfcf;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-rows:10px 10px 10px;
+    grid-gap:10px;
+    width:100px;
+}

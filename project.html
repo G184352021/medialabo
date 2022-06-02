@@ -3,21 +3,47 @@
     <head>
         <meta charset="utf-8">
         <title>My project weather page</title>
-        <script src="weather.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+        <script src="project.js" defer></script>
         <link rel="stylesheet" href="project_style.css">
     </head>
-    <label>
-        <p>世界の天気</p>
-        <p>東京(日本)</p>
-        <p>天気：<br>最高気温/最低気温:<br>湿度:</p>
-        
-        <p>都市名:<span id="tosi"></span></p>
-        <p>最高気温:<span id="max"></span></p>
-        <p>最低気温:<span id="min"></span></p>
-
-
-        <label for="know">知りたい都市を入力:</label>
-        <input type="text" name="know" id="know" size="4">
+        <h3>世界の天気を表示します。</h3>
+        <h4>知りたい情報を選択してください。</h4>
+        <input type="checkbox" name="know" id="know">
+        <label for="know">天気</label>
+        <input type="checkbox" name="know" id="know">
+        <label for="know">湿度</label>
+        <input type="checkbox" name="know" id="know">
+        <label for="know"></label>
+        <input type="checkbox" name="know" id="know">
+        <label for="know"></label>
+        <input type="checkbox" name="know" id="know">
+        <label for="know"></label>
+        <input type="checkbox" name="know" id="know">
+        <label for="know"></label>
         <button id="toshi">表示</button>
+        <p>表示できる都市</p>
+        
+            <p class="tosi" id="kairo">カイロ</p>
+            <p class="tosi" id="mosuku">モスクワ</p>
+            <p class="tosi" id="yohane">ヨハネスブルク</p>
+            <p class="tosi" id="pekin">北京</p>
+            <p class="tosi" id="tokyo">東京</p>
+            <p class="tosi" id="singa">シンガポール</p>
+            <p class="tosi" id="sido">シドニー</p>
+            <p class="tosi" id="rondon">ロンドン</p>
+            <p class="tosi" id="pari">パリ</p>
+            <p class="tosi" id="rio">リオデジャネイロ</p>
+            <p class="tosi" id="new">ニューヨーク</p>
+            <p class="tosi" id="ross">ロサンゼルス</p>
+        
+        <p><span id="tosi"></span></p>
+        <p><span id="weather"></span></p>
+        <p><span id="shitudo"></span></p>
+        <p><span id="max"></span></p>
+        <p><span id="min"></span></p>
+
+
+        
     </body>
 </html>
