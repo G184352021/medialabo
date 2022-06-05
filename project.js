@@ -64,7 +64,7 @@ function showResult(resp) {
                 ul.insertAdjacentElement("beforeend",li);
             }
             if(iremono==='wind.speed'){
-                li.textContent='風速:'+ data.wind.speed;
+                li.textContent='風速:'+ data.wind.speed+"m/s";
                 ul.insertAdjacentElement("beforeend",li);
             }
         }
