@@ -1,39 +1,17 @@
-let i=document.querySelector('input[name="know"]');
-    let math = i.value;
-    let x;
-
-    if(math==="カイロ"){
-        x=360630;
-    }else if(math==="モスクワ"){
-        x=524901;
-    }else if(math==="ヨハネスブルク"){
-        x=993800;
-    }else if(math==="北京"){
-        x=1816670;
-    }else if(math==="シンガポール"){
-        x=1880252;
-    }else if(math==="シドニー"){
-        x=2147714;
-    }else if(math==="ロンドン"){
-        x=2643743;
-    }else if(math==="パリ"){
-        x=2968815;
-    }else if(math==="リオデジャネイロ"){
-        x=3451189;
-    }else if(math==="ニューヨーク"){
-        x=5128581;
-    }else if(math==="ロサンゼルス"){
-        x=5368361;
-    }else if(math==="東京"){
-        x=1850147;
-    }
-
-let b = document.querySelector('button#toshi');
+let b = document.querySelector('button#world');
 b.addEventListener('click', sendRequest);
 
 
 // 通信を開始する処理
 function sendRequest() {
+let math;
+let x;
+    let y=document.querySelectorAll('input[name="world"]');
+    for(math of y){
+        if(math.checked){
+            x=math.value;
+        }
+    }
 
     // URL を設定
     let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+x+'.json';
@@ -45,6 +23,7 @@ function sendRequest() {
         .then(finish);      // 通信の最後の処理
 }
 
+
 // 通信が成功した時の処理
 function showResult(resp) {
     // サーバから送られてきたデータを出力
@@ -55,23 +34,43 @@ function showResult(resp) {
         data = JSON.parse(data);
     }
 
-    //都市名
-    let toshi=document.querySelector('span#tosi');
+    let toshi=document.querySelector('div#tosi');
     toshi.textContent='都市名:'+data.name;
-    //天気
-    let sora=document.querySelector('span#weather');
-    sora.textContent='天気:'+data.weather.description;
-    //湿度
-    let situdo=document.querySelector('span#shitudo');
-    situdo.textContent='湿度:'+data.main.humidity+'%';
-    //最高気温
-    let max=document.querySelector('span#max');
-    max.textContent='最高気温:'+data.main.temp_max+'℃';
-    //最低気温
-    let min=document.querySelector('span#min');
-    min.textContent='最低気温:'+data.main.temp_min+'℃';
-}
 
+    let iremono;
+    let r;
+    let i=document.querySelectorAll('input[name="know"]');
+    let ul=document.createElement("ui");
+    let div=document.querySelector("div#tosi");
+    div.insertAdjacentElement("afterend",ul);
+    for(r of i){
+        if(r.checked){
+            let li=document.createElement("li");
+            iremono=r.value;
+            if(iremono==='weather.description'){
+                li.textContent='天気:'+ data.weather[0].description;
+                ul.insertAdjacentElement("beforeend",li);
+            }
+            if(iremono==='main.humidity'){
+                li.textContent='湿度:'+ data.main.humidity+"%";
+                ul.insertAdjacentElement("beforeend",li);
+            }
+            if(iremono==='main.temp_max'){
+                li.textContent='最高気温:'+ data.main.temp_max+"℃";
+                ul.insertAdjacentElement("beforeend",li);
+            }
+            if(iremono==='main.temp_min'){
+                li.textContent='最低気温:'+ data.main.temp_min+"℃";
+                ul.insertAdjacentElement("beforeend",li);
+            }
+            if(iremono==='wind.speed'){
+                li.textContent='風速:'+ data.wind.speed;
+                ul.insertAdjacentElement("beforeend",li);
+            }
+        }
+        
+    }
+}
 // 通信エラーが発生した時の処理
 function showError(err) {
     console.log(err);
