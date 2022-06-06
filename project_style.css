@@ -1,11 +1,64 @@
-p{
-    color:blue;
+body{
+    background-color:rgba(247, 236, 253, 0.729);
+    margin-top: 3em;
+    margin-left:2em;
 }
-p.tosi{
-	border: 1px solid #cfcfcf;
-    display:grid;
-    grid-template-columns:1fr 2fr 2fr 2fr;
-    grid-template-rows:30px 30px 30px;
-    grid-gap:10px;
-    width:100px;
+p.data{
+    font-size: 19px;
+    padding-left:1em;
+}
+p.note{
+    font-size: 15px;
+    padding-left:1.7em;
+    color:rgb(249, 179, 114);
+    width:15.6%;
+    background-color: rgba(240, 248, 255, 0.62);
+}
+p.top{
+    border-top:dotted;
+    border-bottom: dotted;
+    border-left: inset;
+    border-right:inset;
+    background-color: rgba(172, 217, 202, 0.345);
+    border-width: 6.5px;
+    border-color: rgb(29, 167, 167);
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 70%;
+}
+p.flow{
+    border-top:dotted;
+    border-bottom: dotted;
+    border-left: inset;
+    border-right:inset;
+    background-color: rgba(172, 217, 202, 0.345);
+    border-width: 6.5px;
+    border-color: rgb(29, 167, 167);
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 23%;
+}
+button{
+    background-color:rgba(137, 208, 244, 0.426);
+    font-size:18px;
+}
+ul{
+    padding-top:10px;
+    font-size:20.5px;
+    border-style:dotted;
+    width: 40%;
+    padding-left:3em;
+    padding-bottom:12px;
+}
+div#tosi{
+    padding-top:1em;
+    padding-left:1em;
+    font-size:24px
+
+}
+li{
+    color:rgb(0, 52, 10);
+}
+h2{
+    padding:0em;
 }
