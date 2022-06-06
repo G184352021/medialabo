@@ -1,3 +1,6 @@
+body{
+    background-color:rgba(214, 227, 146, 0.795)
+}
 h1{
     color:rgb(126, 203, 247);
     background-color: rgba(221, 160, 221, 0.34);
@@ -6,7 +9,7 @@ h2,p.x{
     border:1px 
 }
 a:link{
-    color:mediumaquamarine;
+    color:rgb(14, 21, 47);
 }
 a:visited{
     color:lightpink;
@@ -16,7 +19,7 @@ strong{
     border-bottom:thick double rgb(229, 169, 189);
 }
 h3.main{
-    color:aquamarine;
+    color:rgb(239, 146, 170);
 }
 p.em{
     border:0.4em double gray;
@@ -24,4 +27,5 @@ p.em{
     padding:0.5em;
     padding-right:1em;
     color:darkolivegreen;
+    width: 25%;
 }
