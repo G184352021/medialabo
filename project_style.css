@@ -24,7 +24,8 @@ p.top{
     border-color: rgb(29, 167, 167);
     padding-left: 20px;
     padding-right: 20px;
-    width: 70%;
+    width: 65%;
+    font-size: 17px;
 }
 p.flow{
     border-top:dotted;
@@ -36,11 +37,12 @@ p.flow{
     border-color: rgb(29, 167, 167);
     padding-left: 20px;
     padding-right: 20px;
-    width: 23%;
+    width: 25%;
+    font-size: 17px;
 }
 button{
     background-color:rgba(137, 208, 244, 0.426);
-    font-size:18px;
+    font-size:23px;
 }
 ul{
     padding-top:10px;
@@ -61,4 +63,9 @@ li{
 }
 h2{
     padding:0em;
+}
+h3{
+    border-bottom: solid;
+    width: 30%;
+    border-color: rgb(124, 121, 121);
 }

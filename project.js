@@ -1,9 +1,11 @@
+    let count=0;
     let b = document.querySelector('button#world');
     b.addEventListener('click', sendRequest);
 
 
     // 通信を開始する処理
     function sendRequest() {
+    console.log(count);    
     let math;
     let x;
         let y=document.querySelectorAll('input[name="world"]');
@@ -26,6 +28,7 @@
 
     // 通信が成功した時の処理
     function showResult(resp) {
+        count+=1;
         // サーバから送られてきたデータを出力
         let data = resp.data;
 
@@ -48,12 +51,15 @@
 
         let iremono;
         let r;
+        let ul;
+        let li;
         let i=document.querySelectorAll('input[name="know"]');
-        let ul=document.createElement("ul");
-        toshi.insertAdjacentElement("afterend",ul);
+            ul=document.createElement("ul");
+            toshi.insertAdjacentElement("afterend",ul);
+
         for(r of i){
             if(r.checked){
-                let li=document.createElement("li");
+                li=document.createElement("li");
                 iremono=r.value;
                 if(iremono==='weather.description'){
                     li.textContent='天気:'+ data.weather[0].description;
@@ -89,9 +95,13 @@
                 ul.insertAdjacentElement("beforeend",li);
             }
             }
-            
+        }if(count>=1){
+            let p=document.createElement("p");
+            p.textContent=a+"の検索結果です  ⤴";
+            ul.insertAdjacentElement("afterend",p);
         }
     }
+    
     // 通信エラーが発生した時の処理
     function showError(err) {
         console.log(err);
