@@ -1,25 +1,53 @@
 body{
-    background-color:rgba(214, 227, 146, 0.795)
+    background-color:rgba(214, 227, 146, 0.795);
+}
+p{
+    margin-left:40px;
+    padding-bottom: 2px;
+    font-size: 19.5px;
+}
+p.q{
+    margin-left:40px;
+    font-size: 19px;   
+}
+h3{
+    border:outset;
+    color:rgb(239, 167, 167);
+    background-color: rgba(184, 252, 235, 0.57);
+    border-color: rgb(186, 219, 208);
+    width:30%;
+    margin-left: 23px;
 }
 h1{
-    color:rgb(126, 203, 247);
+    color:rgb(7, 115, 173);
+    border: ridge;
+    border-color: rgba(255, 166, 255, 0.34);
     background-color: rgba(221, 160, 221, 0.34);
+    width: 30%;
+    font-weight: 0px;
+    margin-left: 2em;
 }
 h2,p.x{
-    border:1px 
+    border:1px;
+    color:rgb(65, 81, 83);
 }
 a:link{
-    color:rgb(14, 21, 47);
+    color:rgb(0, 111, 151);
+    font-size: 15px;
 }
 a:visited{
-    color:lightpink;
+    color:rgb(16, 72, 5);
 }
 strong{
     color:rgb(58, 58, 58);
     border-bottom:thick double rgb(229, 169, 189);
 }
 h3.main{
-    color:rgb(239, 146, 170);
+    color:rgba(232, 249, 228, 0.84);
+    border:outset;
+    background-color: rgba(35, 176, 223, 0.56);
+    width:60%;
+    margin-left: 1px;
 }
 p.em{
     border:0.4em double gray;
@@ -28,4 +56,32 @@ p.em{
     padding-right:1em;
     color:darkolivegreen;
     width: 25%;
+}
+em.t{
+    color:rgb(246, 95, 95);
+    font-style: unset;
+}
+button{
+    background-color:rgba(95, 158, 160, 0.656);
+    width: 13em;
+}
+ul{
+    border:groove;
+    margin:1em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    width:37%;
+    border-color: rgba(26, 140, 115, 0.575);
+    background-color:rgba(27, 128, 106, 0.398);
+}
+li{
+    color:rgb(31, 55, 69);
+}
+p.a{
+    border:none;
+    background-color: rgba(136, 247, 210, 0.268);
+    margin:0.3em;
+    width:95.8%;
+    margin-left: 40px;
 }
